@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@next.js-14-template/tools": ["tools/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
