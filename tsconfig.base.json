@@ -15,6 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@next.js-14-template/db": ["libs/db/src/index.ts"],
+      "@next.js-14-template/db/server": ["libs/db/src/server.ts"],
       "@next.js-14-template/tools": ["tools/src/index.ts"]
     }
   },
