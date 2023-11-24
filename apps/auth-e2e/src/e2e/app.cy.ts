@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('next.js-14-template-e2e', () => {
+describe('auth-e2e', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {

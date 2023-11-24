@@ -13,7 +13,7 @@ export default async function Index() {
           <div id="welcome">
             <h1>
               <span> Hello there, </span>
-              Welcome next.js-14-template 👋
+              Welcome auth 👋
             </h1>
           </div>
 

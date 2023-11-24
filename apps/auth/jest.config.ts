@@ -1,11 +1,11 @@
 /* eslint-disable */
 export default {
-  displayName: 'next.js-14-template',
+  displayName: 'auth',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nx/next/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/apps/next.js-14-template',
+  coverageDirectory: '../../coverage/apps/auth',
 };

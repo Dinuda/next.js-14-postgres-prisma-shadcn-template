@@ -1,7 +1,7 @@
 {
-  "name": "next.js-14-template",
+  "name": "auth",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/next.js-14-template",
+  "sourceRoot": "apps/auth",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,11 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/next.js-14-template"
+        "outputPath": "dist/apps/auth"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/next.js-14-template"
+          "outputPath": "apps/auth"
         },
         "production": {}
       }
@@ -22,16 +22,16 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "next.js-14-template:build",
+        "buildTarget": "auth:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "next.js-14-template:build:development",
+          "buildTarget": "auth:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "next.js-14-template:build:production",
+          "buildTarget": "auth:build:production",
           "dev": false
         }
       }
@@ -39,21 +39,21 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "next.js-14-template:build:production"
+        "buildTarget": "auth:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/next.js-14-template/jest.config.ts"
+        "jestConfig": "apps/auth/jest.config.ts"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/next.js-14-template/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/auth/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
