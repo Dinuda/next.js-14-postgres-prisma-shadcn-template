@@ -1,0 +1,17 @@
+{
+  "name": "@monorepo/{{kebabCase name}}",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "start": "nodemon --inspect dist/index.js",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "clean": "rm -rf ./dist && rm tsconfig.tsbuildinfo",
+    "watch": "tsc -b -w --preserveWatchOutput"
+  }
+}

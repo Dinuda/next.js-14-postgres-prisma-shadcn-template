@@ -12,7 +12,8 @@
     "dev": "turbo run dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "generate": "turbo run generate",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "generate-component": "plop component --plopfile 'plop/plopfile.mjs'"
   },
   "devDependencies": {
     "prettier": "^2.5.1",
@@ -23,5 +24,8 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "inquirer-autocomplete-prompt": "^3.0.1"
+  }
 }

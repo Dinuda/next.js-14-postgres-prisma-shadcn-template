@@ -1,0 +1,29 @@
+import React, { FC, forwardRef } from 'react'
+import { {{pascalCase name}}Props } from './types'
+
+const ID = '{{pascalCase name}}'
+
+
+export const {{pascalCase name}}: FC<{{pascalCase name}}Props> = forwardRef<
+  HTMLDivElement,
+  {{pascalCase name}}Props
+>(({ 'data-selector': dataSelector = ID, className, 'aria-label': ariaLabel }, ref) => {
+  return (
+    <div
+      className={className}
+      aria-label={ariaLabel}
+      data-selector={dataSelector}
+      ref={ref}
+    >
+    {{pascalCase name}} Content
+    </div>
+  )
+})
+
+{{pascalCase name}}.displayName = '{{pascalCase name}}'
+
+export default Object.assign({{pascalCase name}}, {
+  ID,
+}) as typeof {{pascalCase name}} & {
+  ID: string
+}

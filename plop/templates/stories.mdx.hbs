@@ -1,0 +1,19 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs'
+import {{pascalCase name}} from '../'
+
+<Meta
+  title='Components/{{pascalCase group}}/{{pascalCase name}}'
+  component={ {{pascalCase name}} }
+/>
+
+### {{pascalCase name}}
+
+<Canvas>
+  <Story name='Preview' args={ {} }>
+    <{{pascalCase name}} />
+  </Story>
+</Canvas>
+
+### {{pascalCase name}} Props
+
+<ArgsTable of={ {{pascalCase name}} } />
