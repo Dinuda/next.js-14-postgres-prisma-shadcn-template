@@ -1,31 +1,30 @@
 {
   "private": true,
-  "prisma": {
-    "schema": "packages/database/prisma/schema.prisma",
-    "seed": "tsx packages/database/src/seed.ts"
-  },
   "scripts": {
-    "build": "turbo run build",
-    "db:migrate:deploy": "turbo run db:migrate:deploy",
-    "db:push": "turbo run db:push",
-    "db:seed": "turbo run db:seed",
-    "dev": "turbo run dev",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "generate": "turbo run generate",
-    "lint": "turbo run lint",
-    "generate-component": "plop component --plopfile 'plop/plopfile.mjs'"
+    "dev": "prisma generate && next dev",
+    "build": "prisma generate && prisma db push && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.14.0",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "bcrypt": "^5.1.0",
+    "next": "^13.4.2",
+    "next-auth": "^4.22.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
-    "prettier": "^2.5.1",
-    "tsx": "^3.7.1",
-    "turbo": "latest"
-  },
-  "packageManager": "npm@10.2.3",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "dependencies": {
-    "inquirer-autocomplete-prompt": "^3.0.1"
+    "@types/bcrypt": "^5.0.0",
+    "autoprefixer": "^10.4.4",
+    "eslint": "8.11.0",
+    "eslint-config-next": "^13.0.5",
+    "postcss": "^8.4.12",
+    "prisma": "^4.14.0",
+    "tailwindcss": "^3.0.23",
+    "typescript": "^4.6.2"
   }
 }
