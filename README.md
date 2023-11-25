@@ -1,13 +1,9 @@
-# Turborepo starter
+# Turborepo Next.js with Prisma Postgres with Server Side Rendering
 
-This is an official starter turborepo.
-
-## Using this example
-
-Run the following command:
+## Install & Setup
 
 ```sh
-npx create-turbo@latest -e with-prisma
+npm install
 ```
 
 ## What's inside?

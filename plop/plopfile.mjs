@@ -154,11 +154,6 @@ export default function Main (plop) {
         path: `${compPath}/{{kebabCase group}}/{{kebabCase name}}/src/{{kebabCase name}}.tsx`,
       },
       {
-        type: "add",
-        templateFile: "templates/stories.mdx.hbs",
-        path: `${compPath}/{{kebabCase group}}/{{kebabCase name}}/src/stories/{{pascalCase name}}.stories.mdx`,
-      },
-      {
         type: "installDependencies",
       },
     ],
