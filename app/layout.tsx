@@ -3,8 +3,8 @@ import "@/styles/globals.css";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
-import AuthStatus from "@/components/auth-status";
 import { Suspense } from "react";
+import Header from "@/components/header/header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -37,7 +37,7 @@ export default async function RootLayout({
       <body className={inter.variable}>
         <Toaster />
         <Suspense fallback="Loading...">
-          <AuthStatus />
+          <Header />
         </Suspense>
         {children}
       </body>

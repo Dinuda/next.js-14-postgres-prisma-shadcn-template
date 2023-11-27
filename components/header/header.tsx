@@ -1,24 +1,17 @@
 import { getServerSession } from "next-auth/next";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import SignOut from "./sign-out";
+import SignOut from "../sign-out";
 
-export default async function AuthStatus() {
+export default async function Header() {
   const navigation = [
-    { name: "Home", href: "" },
+    { key: "Home", value: "" },
     { key: "features", value: "features" },
     { key: "pricing", value: "pricing" },
   ];
 
   const session = await getServerSession();
   return (
-    // <div className="absolute top-5 w-full flex justify-center items-center">
-    //   {session && (
-    //     <p className="text-stone-200 text-sm">
-    //       Signed in as {session.user?.email}
-    //     </p>
-    //   )}
-    // </div>
     <div className="bg-white absolute inset-x-0 top-0 z-50">
       <nav
         className="flex items-center justify-between p-6 lg:px-8"
@@ -60,9 +53,6 @@ export default async function AuthStatus() {
           {session && session.user ? (
             <div>
             <p>Hello, {session.user?.email}</p>
-            {/* <a className="text-sm font-semibold leading-6 text-gray-900" onClick={() => signOut()}>
-              Log out
-            </a> */}
             <SignOut />
             </div>
           ) : (
