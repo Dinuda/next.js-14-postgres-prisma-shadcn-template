@@ -1,16 +1,16 @@
 import { getServerSession } from "next-auth/next";
-import { Bars3Icon } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import ProfileSwitcher from "../ui/nav/profile-switcher";
 import { UserNav } from "../ui/nav/user-nav";
 import { NavElements } from "../ui/nav/nav-elements";
+import { INavLink } from "../interface/INavLink";
+
 
 export default async function Header() {
   const navigation = [
     { key: "Home", value: "" },
-    { key: "features", value: "features" },
-    { key: "pricing", value: "pricing" },
-  ];
+    { key: "About", value: "features" },
+    { key: "Pricing", value: "pricing" },
+  ] as INavLink[];
 
   const session = await getServerSession();
   return (
@@ -20,7 +20,7 @@ export default async function Header() {
           <div className="flex h-16 items-center px-4">
             <ProfileSwitcher />
             <div className="mx-6">
-              <NavElements />
+              <NavElements navigationLinks={navigation} />
             </div>
             <div className="ml-auto flex items-center space-x-4">
               <UserNav />

@@ -1,40 +1,20 @@
-import Link from "next/link"
+import Link from "next/link";
+import { INavLink } from "../../interface/INavLink";
 
-import { cn } from "@/lib/utils"
 
-export function NavElements({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLElement>) {
+export function NavElements({ navigationLinks }: { navigationLinks: INavLink[] }) {
   return (
     <nav
-      className={cn("flex items-center space-x-4 lg:space-x-6", className)}
-      {...props}
-    >
-      <Link
-        href="/"
-        className="text-sm font-medium transition-colors hover:text-primary"
-      >
-        Overview
-      </Link>
-      <Link
-        href="/dashboard"
-        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-      >
-        Customers
-      </Link>
-      <Link
-        href="/dashboard"
-        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-      >
-        Products
-      </Link>
-      <Link
-        href="/dashboard"
-        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-      >
-        Settings
-      </Link>
+      className="flex items-center space-x-4 lg:space-x-6">
+        {navigationLinks.map((link: { key: string, value: string}) => (
+            <Link
+            key={link.key}
+            href={`/${link.value}`}
+            className="text-sm font-medium transition-colors hover:text-primary"
+            >
+            {link.key}
+            </Link>
+        ))}
     </nav>
-  )
+  );
 }
