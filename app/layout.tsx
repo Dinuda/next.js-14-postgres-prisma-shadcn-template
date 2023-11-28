@@ -24,7 +24,11 @@ export const metadata: Metadata = {
     description,
   },
   metadataBase: new URL("https://nextjs-postgres-auth.vercel.app"),
-  themeColor: "#FFF",
+  creator: "shadcn",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 export default async function RootLayout({
@@ -40,6 +44,7 @@ export default async function RootLayout({
           <Header />
         </Suspense>
         {children}
+
       </body>
     </html>
   );
