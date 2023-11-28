@@ -75,7 +75,7 @@ type PopoverTriggerProps = React.ComponentPropsWithoutRef<typeof PopoverTrigger>
 
 interface ProfileSwitcherProps extends PopoverTriggerProps {}
 
-export default function ProfileSwitcher({ className }: ProfileSwitcherProps) {
+export default function ProfileSwitcher({ className }: ProfileSwitcherProps & { session: any }) {
   const [open, setOpen] = React.useState(false)
   const [showNewTeamDialog, setShowNewTeamDialog] = React.useState(false)
   const [selectedTeam, setSelectedTeam] = React.useState<Team>(

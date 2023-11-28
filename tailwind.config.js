@@ -1,3 +1,5 @@
+const { colors } = require('./theme/theme1');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -49,6 +51,20 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        extended: {
+          color1: colors["light-yellow"],
+          color2: colors["light-purplish-blue"], // Please choose one of the "light-purplish-blue" colors or differentiate them.
+          color3: colors["light-blue"], // Please choose one of the "light-purplish-blue" colors or differentiate them.
+          color4: colors["light-greenish-blue"],
+          color5: colors["light-pink"],
+          color6: colors["light-orange"],
+          color7: colors["main-theme-orange"],
+          color8: colors["light-red"],
+          color9: colors["peach"],
+          color10: colors["light-purple"],
+          color11: colors["light-green"],
+          color12: colors["dark-purplish-blue"]
         },
       },
       borderRadius: {
