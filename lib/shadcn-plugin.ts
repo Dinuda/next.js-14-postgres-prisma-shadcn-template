@@ -1,7 +1,6 @@
 import plugin from "tailwindcss/plugin";
 import AnimatePlugin from "tailwindcss-animate";
 
-
 export const shadcnPlugin = plugin(
   function ({ addBase }) {
     addBase({
@@ -26,6 +25,11 @@ export const shadcnPlugin = plugin(
         "--input": "214.3 31.8% 91.4%",
         "--ring": "222.2 84% 4.9%",
         "--radius": "0.5rem",
+        // custom color for theme
+        "--brown-dark-1": "355 45% 31%",
+        "--magenta-dark-1": "200 55% 37%",
+        "--purple-dark-1": "261 51% 51%",
+        "--dark-green-1": "145 58% 55%",
       },
       ".dark": {
         "--background": "222.2 84% 4.9%",
@@ -48,7 +52,7 @@ export const shadcnPlugin = plugin(
         "--input": "217.2 32.6% 17.5%",
         "--ring": "212.7 26.8% 83.9%",
       },
-    })
+    });
 
     addBase({
       "*": {
@@ -57,7 +61,7 @@ export const shadcnPlugin = plugin(
       body: {
         "@apply bg-background text-foreground": {},
       },
-    })
+    });
   },
   {
     theme: {
@@ -103,6 +107,11 @@ export const shadcnPlugin = plugin(
             DEFAULT: "hsl(var(--card))",
             foreground: "hsl(var(--card-foreground))",
           },
+          // add your custom colors here
+          "dark-1": "hsl(var(--brown-dark-1))",
+          "dark-2": "hsl(var(--magenta-dark-1))",
+          "dark-3": "hsl(var(--purple-dark-1))",
+          "dark-4": "hsl(var(--dark-green-1))",
         },
         borderRadius: {
           lg: "var(--radius)",
