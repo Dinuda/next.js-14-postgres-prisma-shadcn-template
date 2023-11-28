@@ -1,4 +1,6 @@
 import plugin from "tailwindcss/plugin";
+import AnimatePlugin from "tailwindcss-animate";
+
 
 export const shadcnPlugin = plugin(
   function ({ addBase }) {
@@ -123,5 +125,6 @@ export const shadcnPlugin = plugin(
         },
       },
     },
+    plugins: [AnimatePlugin],
   }
 );
