@@ -42,7 +42,7 @@ export default async function Header() {
                 </div>
                 <div className="ml-auto flex items-center space-x-4">
                   <Link href="/sign-up" className="">
-                    <Button className="bg-extended-color12">Sign In</Button>
+                    <Button className="">Sign In</Button>
                   </Link>
                 </div>
               </>
