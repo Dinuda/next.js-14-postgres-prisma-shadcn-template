@@ -3,7 +3,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["jsonProtocol"]
 }
 
 datasource db {
@@ -18,3 +17,5 @@ model User {
   email     String  @unique
   password  String
 }
+
+// add more models here

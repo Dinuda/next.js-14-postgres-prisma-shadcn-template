@@ -41,9 +41,9 @@ export default async function Header() {
                   <NavElements navigationLinks={navigation} />
                 </div>
                 <div className="ml-auto flex items-center space-x-4">
-                  <Link href="/sign-up" className="">
+                  <Link href="/register" className="">
                   <Button variant="brown" >
-                      Sign Up
+                      Register
                     </Button>
                   </Link>
                 </div>
