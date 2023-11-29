@@ -24,6 +24,7 @@ POSTGRES_URL_NON_POOLING=
 NEXTAUTH_SECRET=
 ```
 
+
 First, run the development server:
 
 ```bash
