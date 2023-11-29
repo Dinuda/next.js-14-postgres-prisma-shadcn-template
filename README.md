@@ -11,6 +11,7 @@ This is a <a href="https://nextjs.org/">Next.js</a> starter kit that uses <a hre
 
 <br/>
 
+
 ## Configure the Database
 
 - create a `.env` file in the root of the project
